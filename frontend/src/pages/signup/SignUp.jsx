@@ -22,10 +22,11 @@ function SignUp() {
     await signup(inputs);
   };
   return (
+   <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
     <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
-      <div className="w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop:-filter backdrop-blur-lg bg-opacity-0">
-        <h1 className="text-3xl font-semibold text-center text-gray-300">
-          Signup <span className="text-blue-500">ChatApp</span>
+      <div className="w-full p-6 rounded-lg shadow-md  bg-white bg-clip-padding backdrop:-filter backdrop-blur-lg">
+        <h1 className="text-3xl font-semibold text-center text-black-300">
+          Signup <span className="text-blue-300">ChatApp</span>
         </h1>
         <form onSubmit={handleSubmit}>
           <div>
@@ -34,7 +35,6 @@ function SignUp() {
             </label>
             <input
               type="text"
-              placeholder="John Doe"
               className="w-full input input-bordered h-10"
               value={inputs.fullName}
               onChange={(e) =>
@@ -48,7 +48,6 @@ function SignUp() {
             </label>
             <input
               type="text"
-              placeholder="johndoe"
               className="w-full input input-bordered h-10"
               value={inputs.username}
               onChange={(e) =>
@@ -62,7 +61,6 @@ function SignUp() {
             </label>
             <input
               type="password"
-              placeholder="Enter Password"
               className="w-full input input-bordered h-10"
               value={inputs.password}
               onChange={(e) =>
@@ -76,7 +74,6 @@ function SignUp() {
             </label>
             <input
               type="Confirm password"
-              placeholder="Enter Password"
               className="w-full input input-bordered h-10"
               value={inputs.confirmPassword}
               onChange={(e) =>
@@ -99,12 +96,18 @@ function SignUp() {
               className="btn btn-block btn-sm mt-2 bg-blue-500  text-white border-none h-10"
               disabled={loading}
             >
-             {loading ? <span className="loading loading-spinner"></span>: "Sign Up"}
+              {loading ? (
+                <span className="loading loading-spinner"></span>
+              ) : (
+                "Sign Up"
+              )}
             </button>
           </div>
         </form>
       </div>
     </div>
+    <small className="text-white"> &copy; chatApp 2024 . Designed & Developed by Chimbo</small>
+   </div>
   );
 }
 

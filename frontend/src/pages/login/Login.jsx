@@ -9,13 +9,12 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await login(username, password);
-   
   };
   return (
     <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
-      <div className="w-full p-6 rounded-lg shadow-md bg-black backdrop-filter backdrop-blur-lg bg-opacity-0">
+      <div className="w-full p-6 rounded-lg shadow-md bg-white ">
         <h1 className="text-3xl font-semibold text-center text-light-300">
-          Login <span className="text-blue-500">ChatApp</span>
+          Login <span className="text-blue-300">ChatApp</span>
         </h1>
         <form onSubmit={handleSubmit}>
           <div>
@@ -24,7 +23,6 @@ function Login() {
             </label>
             <input
               type="text"
-              placeholder=" Enter username"
               className="w-full input input-bordered h-10"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
@@ -37,7 +35,6 @@ function Login() {
             </label>
             <input
               type="password"
-              placeholder=" Enter password"
               className="w-full input input-bordered h-10"
               value={password}
               onChange={(e) => setPassword(e.target.value)}

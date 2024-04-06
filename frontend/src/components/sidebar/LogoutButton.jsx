@@ -9,7 +9,7 @@ const {loading, logout}= useLogOut();
     <div className='mt-auto'>
 
       {!loading ? (
-        <MdOutlineLogout className='w-6 h-6 text-white cursor-pointer' onClick={logout}/>
+        <MdOutlineLogout className='w-6 h-6 text-sky-500 cursor-pointer mt-5' onClick={logout}/>
       ):(
         <span className='loading loading-spinner'></span>
       )}
